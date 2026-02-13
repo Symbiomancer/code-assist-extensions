@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "shopping-assistant": {
+      "command": "python",
+      "args": ["-m", "shopping_tool"],
+      "env": {
+        "OPENROUTER_API_KEY": "$OPENROUTER_API_KEY",
+        "SHOPPING_HEADLESS": "false"
+      },
+      "timeout": 120000
+    }
+  }
+}

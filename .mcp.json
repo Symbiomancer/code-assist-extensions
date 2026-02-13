@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "shopping-assistant": {
+      "type": "stdio",
+      "command": "/home/matthew-evanusa/code-assist-extensions/.venv/bin/python",
+      "args": [
+        "-m",
+        "shopping_tool"
+      ],
+      "env": {}
+    }
+  }
+}

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "shopping-assistant-mcp"
+version = "0.1.0"
+description = "Shopping assistant MCP server for Claude Code, Codex CLI, and Gemini CLI"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "playwright>=1.40.0",
+    "openai>=1.0.0",
+    "cryptography>=41.0.0",
+    "pydantic>=2.0.0",
+    "httpx>=0.27.0",
+    "beautifulsoup4>=4.12.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["shopping_tool"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[project.scripts]
+shopping-assistant = "shopping_tool.server:run"

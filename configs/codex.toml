@@ -1,0 +1,12 @@
+# Codex CLI MCP configuration
+# Copy the [mcp_servers.shopping-assistant] section to ~/.codex/config.toml
+# or to .codex/config.toml in your project root.
+
+[mcp_servers.shopping-assistant]
+command = "python"
+args = ["-m", "shopping_tool"]
+tool_timeout_sec = 120
+
+[mcp_servers.shopping-assistant.env]
+OPENROUTER_API_KEY = "your-openrouter-key-here"
+SHOPPING_HEADLESS = "false"
